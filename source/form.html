@@ -2,26 +2,26 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Cat Energy: подбор программы</title>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__logo">
-        <img class="page-header__image" src="#" alt="Cat energy logo">
+        <img class="page-header__image" src="http://placehold.it/150x100" alt="Cat energy logo">
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="" class="site-list__link">Cat energy</a>
+            <a href="#" class="site-list__link">Cat energy</a>
           </li>
           <li class="site-list__item">
-            <a href="" class="site-list__link">Главная</a>
+            <a href="index.html" class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="" class="site-list__link site-list__link--active">Каталог продукции</a>
+            <a href="catalig.html" class="site-list__link site-list__link--active">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="" class="site-list__link">Подбор программы</a>
+            <a class="site-list__link site-list__link--active">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -31,44 +31,44 @@
         <h1 class="food-program__title">Подбор программы</h1>
         <p class="food-program__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="select-program" action="#" method="get">
-          <div class="select-program__rubric">
-            <label for="name-field">Имя:*</label>
-            <input type="text" name="name" id="name-field">
-            <label for="weight-field"></label>
-            <input type="text" name="weight" id="weight-field">
-            <label for="age-field"></label>
-            <input type="text" name="age" id="age-field">
-          </div>
-          <div class="select-program__rubric">
+          <fieldset class="select-program__field">
+            <label class="select-program__label" for="name-field">Имя:*</label>
+            <input class="select-program__text" type="text" name="name" id="name-field">
+            <label class="select-program__label" for="weight-field"></label>
+            <input class="select-program__text" type="text" name="weight" id="weight-field">
+            <label class="select-program__label" for="age-field"></label>
+            <input class="select-program__text" type="text" name="age" id="age-field">
+          </fieldset>
+          <fieldset class="select-program__field">
             <input type="radio" name="mass" id="radio-1" value="decrease" checked>
-            <label for="radio-1">Похудение</label>
-            <input type="radio" name="mass" id="radio-2" value="increase">
-            <label for="radio-2">Набор массы</label>
-            <input type="radio" name="mass" id="radio-3" value="undefined">
-            <label for="radio-3">Не знаю (нужен ваш совет)</label>
-          </div>
-          <div class="select-program__rubric">
-          Контактные данные (владельца кота)
-            <label for="email-field">E-mail:*</label>
-            <input type="email" name="email" id="email-field">
-            <label for="tel-field">Телефон:*</label>
-            <input type="tel" name="tel" id="tel-field">
-          </div>
-          <div class="select-program__rubric">
-            Комментарий
-            <textarea name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
-          </div>
-          <div class="select-program__rubric">
-            Дополнительно
-            <input type="checkbox" name="sweetener" id="checkbox-1">
-            <label for="checkbox-1">Сахарозаменитель</label>
-            <input type="checkbox" name="water" id="checkbox-2">
-            <label for="checkbox-2">Питьевая вода</label>
-            <input type="checkbox" name="milk" id="checkbox-3">
-            <label for="checkbox-3">Молоко</label>
-            <input type="checkbox" name="vitamins" id="checkbox-4">
-            <label for="checkbox-4">Витамины</label>
-          </div>
+            <label class="select-program__label" for="radio-1">Похудение</label>
+            <input class="select-program__hidden" type="radio" name="mass" id="radio-2" value="increase">
+            <label class="select-program__label" for="radio-2">Набор массы</label>
+            <input class="select-program__hidden" type="radio" name="mass" id="radio-3" value="undefined">
+            <label class="select-program__label" for="radio-3">Не знаю (нужен ваш совет)</label>
+          </fieldset>
+          <fieldset class="select-program__field">
+          <legend class="select-program__legend">Контактные данные (владельца кота)</legend>
+            <label class="select-program__label" for="email-field">E-mail:*</label>
+            <input class="select-program__text" type="email" name="email" id="email-field">
+            <label class="select-program__label" for="tel-field">Телефон:*</label>
+            <input class="select-program__text" type="tel" name="tel" id="tel-field">
+          </fieldset>
+          <fieldset class="select-program__field">
+            <legend class="select-program__legend">Комментарий</legend>
+            <textarea class="select-program__text" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+          </fieldset>
+          <fieldset class="select-program__field">
+            <legend class="select-program__legend">Дополнительно</legend>
+            <input class="select-program__hidden" type="checkbox" name="sweetener" id="checkbox-1">
+            <label class="select-program__label" for="checkbox-1">Сахарозаменитель</label>
+            <input class="select-program__hidden" type="checkbox" name="water" id="checkbox-2">
+            <label class="select-program__label" for="checkbox-2">Питьевая вода</label>
+            <input class="select-program__hidden" type="checkbox" name="milk" id="checkbox-3">
+            <label class="select-program__label" for="checkbox-3">Молоко</label>
+            <input class="select-program__hidden" type="checkbox" name="vitamins" id="checkbox-4">
+            <label class="select-program__label" for="checkbox-4">Витамины</label>
+          </fieldset>
           <button class="select-program__submit button">Отправить заявку</button>
           <span class="select-program__note">* - обязательные поля</span>
         </form>
@@ -79,18 +79,18 @@
         <p class="page-footer__distributors">Приглашаем к сотрудничеству дилеров!</p>
         <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
         <div class="page-footer__map">
-          <img src="#" alt="" class="page-footer__map-image">
+          <img src="http://placehold.it/150x100" alt="" class="page-footer__map-image">
         </div>
       </div>
       <div class="page-footer__bottom">
-        <p class="page-footer__text">Cat Energy</p>
+        <p class="page-footer__text-logo">Cat Energy</p>
         <div class="page-footer__social social">
           <a class="social__btn social__btn--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
           <a class="social__btn social__btn--inst" href="#"><span class="visually-hidden">Инстаграмм</span></a>
           <a class="social__btn social__btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
         </div>
         <div class="page-footer__copyright">
-          Htmlacademy
+          <p class="page-footer__copy">Htmlacademy</p>
         <div class="page-footer__link"><span class="visually-hidden">лендинг интенсива «Продвинутый HTML и CSS»</span></div>
         </div>
       </div>
