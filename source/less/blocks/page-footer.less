@@ -5,20 +5,45 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-
 }
+
 .page-footer__address {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Arial", sans-serif;
 }
+
 .page-footer__top {
   display: flex;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #f2f2f2;
 }
+
 .page-footer__map {
   background-image: url("../img/");
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__distributors {
+    width: 200px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .page-footer__address {
+    .primary-tablet();
+  }
+
+  .page-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

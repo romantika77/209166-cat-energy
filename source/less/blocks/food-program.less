@@ -1,13 +1,28 @@
 .food-program {
   .main-font();
   color: @further-color;
+  // background-color: pink;
 }
+
 .food-program__title {
   .caption();
 }
+
 .food-program__desc {
-  color: @base-color;
+  color: @mark-color;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .food-program__title {
+    .caption-tablet();
+  }
+
+  .food-program__desc {
+    width: 330px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

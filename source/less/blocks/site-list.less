@@ -1,9 +1,11 @@
 .site-list {
   .list-reset();
 }
+
 .site-list__item {
   text-align: center;
 }
+
 .site-list__link {
   .special-font();
   display: block;
@@ -14,4 +16,10 @@
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+  }
 }
