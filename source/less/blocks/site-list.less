@@ -1,0 +1,25 @@
+.site-list {
+  .list-reset();
+}
+
+.site-list__item {
+  text-align: center;
+}
+
+.site-list__link {
+  .special-font();
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: @mark-color;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+  }
+}

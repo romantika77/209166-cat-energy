@@ -1,0 +1,113 @@
+.additional-goods {
+  color: @base-color;
+  .main-font();
+}
+
+.additional-goods__title {
+  color: @mark-color;
+}
+
+.additional-goods__name {
+  color: @further-color;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional-goods__features {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.additional-goods__gift {
+  width: 280px;
+  padding-top: 185px;
+  padding-bottom: 45px;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  color: @white-color;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-color: @grass-color;
+  text-align: center;
+}
+
+.additional-goods__item {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-goods {
+    padding-right: 37px;
+    padding-left: 37px;
+  }
+
+  .additional-goods__gift {
+    width: 708px;
+    padding-left: 420px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-right: 120px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-goods {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: pink;
+  }
+
+  .additional-goods__title {
+    top: -50px;
+    width: 100vw;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -40vw;
+  }
+
+  .additional-goods__wrapper {
+    margin-right: 80px;
+  }
+
+  .additional-goods__item {
+    display: flex;
+    padding: 12px 0;
+    background-color: tan;
+  }
+
+  .additional-goods__name {
+    width: 245px;
+    margin-right: 80px;
+  }
+
+  .additional-goods__features {
+    width: 285px;
+    margin-right: 40px;
+  }
+
+  .additional-goods__gift {
+    width: 245px;
+    padding-top: 185px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 43px;
+    text-align: center;
+  }
+
+  .additional-goods__button {
+    width: 245px;
+  }
+}

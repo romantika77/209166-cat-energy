@@ -1,0 +1,59 @@
+.example {
+  .main-font();
+  padding-right: 20px;
+  padding-left: 20px;
+  color: @base-color;
+  background-color: #f3f3f3;
+}
+
+.example__title {
+  .caption();
+  color: @mark-color;
+}
+
+.example__content {
+  .primary();
+}
+
+.example__termin {
+  color: @mark-color;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.example__desc {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.example__cost {
+  color: @mark-color;
+}
+
+@media (min-width: @tablet-width) {
+  .example__title {
+    .caption-tablet();
+  }
+
+  .example__content {
+    .primary-tablet();
+  }
+
+  .example__termin {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__desc {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .example__cost {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
