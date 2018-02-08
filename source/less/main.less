@@ -34,3 +34,14 @@ img {
     margin: 0 auto;
   }
 }
+
+.only-tablet {
+  display: none;
+}
+
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  .only-tablet {
+    display: inline;
+  }
+
+}

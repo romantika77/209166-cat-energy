@@ -48,9 +48,41 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .site-list__item {
     border-bottom: 0;
+  }
+
+  .site-list__link {
+    margin-left: 36px;
+    padding-top: 11px;
+    color: @further-color;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.86px;
+    .main-font();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__link {
+    margin-left: 33px;
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 24.86px;
+    color: #ffffff;
+    &--active {
+      &::after {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .site-list {
+    width: 570px;
+    background-color: @grass-color;
   }
 }
