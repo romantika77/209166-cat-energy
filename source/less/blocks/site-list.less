@@ -68,11 +68,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-list__link {
-    margin-left: 33px;
-    padding-top: 40px;
-    font-size: 20px;
-    line-height: 24.86px;
+  .site-list__link--white {
     color: #ffffff;
     &--active {
       &::after {
@@ -81,7 +77,14 @@
     }
   }
 
-  .site-list {
+  .site-list__link {
+    margin-left: 33px;
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 24.86px;
+  }
+
+  .site-list--colored {
     width: 570px;
     background-color: @grass-color;
   }

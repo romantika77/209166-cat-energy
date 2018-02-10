@@ -17,9 +17,16 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 @media (min-width: @tablet-width) {
   body {
