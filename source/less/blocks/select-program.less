@@ -4,11 +4,18 @@
   line-height: 18px;
   color: @further-color;
   text-transform: uppercase;
-  // background-color: pink;
+  // background-color: #f7fd9d;
 }
 
 .select-program__field {
   padding: 0;
+  margin: 0;
+}
+
+.select-program__field--information {
+  border: none;
+  padding: 20px;
+  padding-bottom: 12px;
 }
 
 .select-program__legend {
@@ -16,27 +23,158 @@
   font-weight: 400;
   line-height: 24px;
   color: @mark-color;
+  text-transform: none;
   .main-font();
 }
 
+.select-program__hidden {
+  display: none;
+}
+
+.select-program__field--result {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 25px;
+  border: 1px solid #ededed;
+}
+
+.select-program__label--result {
+  position: relative;
+  margin-bottom: 11px;
+  padding-left: 46px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: @white-color;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.select-program__hidden:checked + .select-program__label--result {
+  &::before {
+    width: 28px;
+    height: 28px;
+    background-color: @grass-color;
+    border: 7px solid @white-color;
+    box-shadow: 0 0 0 1px #cdcdcd;
+  }
+
+  &:hover::before {
+    box-shadow: 0 0 0 1px #bababa;
+  }
+}
+
 .select-program__rubric {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0;
   margin: 0;
   margin-bottom: 14px;
-  background-color: plum;
+}
+
+.select-program__field--contacts {
+  padding-top: 28px;
+  padding-bottom: 15px;
+  border: none;
+  .select-program__text {
+    padding-right: 32px;
+  }
+
+  .content-wrapper {
+    padding-top: 36px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+}
+
+.select-program__legend--contacts {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  span {
+    display: block;
+    width: 182px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    height: 3px;
+    width: 99px;
+    background-color: @grass-color;
+  }
+}
+
+.select-program__icon {
+  position: absolute;
+  right: 13px;
+  top: 12px;
+
+  &--email {
+    top: 16px;
+    right: 15px;
+  }
+}
+
+.select-program__field--comment {
+  margin-bottom: 27px;
+  border: none;
+  // padding-top: 35px;
+
+  .content-wrapper {
+    padding-top: 35px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+}
+
+.select-program__legend--comment {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    height: 3px;
+    width: 157px;
+    background-color: @grass-color;
+  }
 }
 
 .select-program__text {
   .main-font();
-  padding: 12px 15px;
+  padding: 12px 14px;
   font-size: 16px;
   line-height: 18px;
   color: @base-color;
   text-transform: uppercase;
+  border: 1px solid #e6e6e6;
 }
 
 .select-program__text--name {
-  width: 229px;
+  width: 231px;
 }
 
 .select-program__label--name {
@@ -49,7 +187,6 @@
 
 .select-program__label--weight {
   width: 77px;
-  background-color: pink;
 }
 
 .select-program__label--age {
@@ -78,6 +215,89 @@
 
 .select-program__text--comment {
   width: 280px;
+  height: 150px;
+  padding-right: 8px;
+  padding-left: 13px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.select-program__field--add {
+  border: none;
+
+  .content-wrapper {
+    padding-top: 38px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+}
+
+.select-program__legend--add {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    height: 3px;
+    width: 136px;
+    background-color: @grass-color;
+  }
+}
+
+.select-program__label--add {
+  position: relative;
+  margin-bottom: 11px;
+  padding-left: 46px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+  }
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+}
+
+.select-program__hidden:checked + .select-program__label--add {
+  &::before {
+    background-image: url("../img/icon-tick.svg");
+    background-size: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+}
+
+.select-program__note {
+  .primary();
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-transform: none;
+}
+
+.select-program__submit {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,6 +307,161 @@
     line-height: 20px;
   }
 
+  .select-program__rubric {
+    margin-bottom: 20px;
+  }
+
+  .select-program__field {
+    .wrap {
+      &::before {
+        top: 23px;
+      }
+    }
+  }
+
+  .select-program__field--information {
+    margin-bottom: 40px;
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+
+  .select-program__field--result {
+    margin-left: 71px;
+    margin-bottom: 46px;
+    padding-top: 33px;
+    padding-bottom: 2px;
+  }
+
+  .select-program__label--result {
+    margin-bottom: 13px;
+    padding-left: 67px;
+
+    &::before {
+      top: -9px;
+      left: 7px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .select-program__hidden:checked + .select-program__label--result {
+    &::before {
+      width: 38px;
+      height: 38px;
+      border: 10px solid @white-color;
+    }
+  }
+
+  .select-program__field--contacts {
+    margin-bottom: 35px;
+
+    .content-wrapper {
+      padding-top: 74px;
+      padding-left: 71px;
+      padding-right: 65px;
+    }
+  }
+
+  .select-program__legend--contacts {
+    width: 708px;
+    padding-left: 0;
+    padding-right: 0;
+
+    span {
+      width: 595px;
+      padding-left: 41px;
+      padding-right: 42px;
+      background-color: @white-color;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .select-program__icon--email {
+    top: 20px;
+    right: 21px;
+  }
+
+  .select-program__icon--phone {
+    top: 17px;
+    right: 16px;
+  }
+
+  .select-program__field--comment {
+    margin-bottom: 60px;
+
+    .content-wrapper {
+      padding-top: 78px;
+      padding-left: 70px;
+      padding-right: 67px;
+    }
+  }
+
+  .select-program__legend--comment {
+    width: 708px;
+    padding-right: 0;
+    padding-left: 0;
+
+    span {
+      width: 260px;
+      padding-right: 40px;
+      padding-left: 40px;
+      background-color: @white-color;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .select-program__field--add {
+    margin-bottom: 0;
+
+    .content-wrapper {
+      padding-top: 66px;
+      padding-left: 70px;
+      padding-right: 68px;
+    }
+  }
+
+  .select-program__legend--add {
+    width: 708px;
+    padding-right: 0;
+    padding-left: 0;
+
+    span {
+      width: 294px;
+      padding-right: 41px;
+      padding-left: 41px;
+      background-color: @white-color;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .select-program__rubric-add {
+    width: 284px;
+    margin-bottom: 42px;
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2) {
+      margin-bottom: 38px;
+    }
+  }
+
+  .select-program__label--add {
+    padding-left: 57px;
+    &::before {
+      top: -9px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   .select-program__legend {
     font-size: 36px;
     line-height: 36px;
@@ -94,9 +469,10 @@
 
   .select-program__text {
     .main-font();
-    padding: 14px 19px;
+    padding: 10px 19px;
     font-size: 20px;
     line-height: 20px;
+    border: 1px solid #e6e6e6;
   }
 
   .select-program__text--name {
@@ -113,7 +489,6 @@
 
   .select-program__label--weight {
     width: 90px;
-    background-color: pink;
   }
 
   .select-program__label--age {
@@ -142,6 +517,8 @@
 
   .select-program__text--comment {
     width: 631px;
+    height: 173px;
+    padding: 14px 19px;
   }
 
   .select-program__wrapper {
@@ -150,36 +527,109 @@
     flex-wrap: wrap;
   }
 
-  .select-program__rubric-add {
-    width: 284px;
+  .select-program__submit {
+    display: inline-block;
+    width: 283px;
+    margin-left: 71px;
+    margin-right: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
   }
 
-  .select-program__submit {
-    width: 283px;
+  .select-program__note {
+    display: inline-block;
+    margin-top: 6px;
+    min-width: 194px;
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .select-program {
+  .select-program .content-wrapper {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 18px;
   }
 
   .select-program__field--information {
     width: 570px;
     margin-right: 80px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 40px;
+    padding-right: 0;
   }
 
   .select-program__field--result {
     width: 570px;
+    margin-left: 0;
+    margin-bottom: 40px;
   }
 
   .select-program__field--contacts {
-    width: 1220px;
-    background-color: tan;
+    margin-bottom: 33px;
+    border: none;
+
+    .content-wrapper {
+      padding-top: 75px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
     .select-program__rubric {
       width: 570px;
+
+      &:nth-of-type(1) {
+        margin-right: 80px;
+      }
+    }
+  }
+
+  .select-program__legend {
+    &--contacts,
+    &--comment,
+    &--add {
+    width: 1300px;
+  }
+}
+
+  .select-program__field--comment {
+    margin-bottom: 68px;
+
+    .content-wrapper {
+      padding-top: 76px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  .select-program__field--add {
+    // background-color: pink;
+
+    .content-wrapper {
+      padding-top: 66px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .select-program__rubric-add {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &:nth-last-of-type(2) {
+      margin-bottom: 30px;
     }
   }
 
@@ -197,7 +647,6 @@
 
   .select-program__label--weight {
     width: 90px;
-    background-color: pink;
   }
 
   .select-program__label--age {
@@ -226,5 +675,16 @@
 
   .select-program__text--comment {
     width: 1220px;
+  }
+
+  .select-program__submit {
+    width: 568px;
+    margin-left: 40px;
+    margin-right: 83px;
+  }
+
+  .select-program__note {
+    margin-top: 33px;
+    margin-left: 0;
   }
 }

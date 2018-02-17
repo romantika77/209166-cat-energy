@@ -17,6 +17,7 @@
 
 .main-nav__logo {
   display: block;
+
   line-height: 100%;
   padding-top: 11px;
   padding-bottom: 16px;
@@ -30,11 +31,15 @@
 }
 
 .main-nav__logo-image {
+  width: 33px;
+  height: 38px;
   margin-right: 53px;
 }
 
 .main-nav__logo-text {
-  padding-top: 5px;
+  width: 101px;
+  height: 18px;
+  // padding-top: 5px;
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -93,18 +98,20 @@
     left: 0;
     z-index: 10;
     background-color: #ffffff;
-    // background-color: pink;
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
-    background-color: pink;
+    min-height: 83px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
+
   .main-nav__logo {
     width: 192px;
-    background-color: khaki;
+    padding-top: 23px;
     border-bottom: 0;
   }
 
@@ -117,8 +124,31 @@
   }
 
   .main-nav__logo-image {
-    width: 68px;
+    width: 173px;
     height: 58px;
-    margin-right: 17px;
+    // margin-right: 17px;
+  }
+
+  .main-nav__logo-text {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    justify-content: space-between;
+    min-height: 114px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .main-nav__logo {
+    width: 245px;
+    padding-top: 54px;
+  }
+
+  .main-nav__logo-image {
+    width: 202px;
+    height: 59px;
   }
 }

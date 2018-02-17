@@ -1,10 +1,10 @@
 .button {
   display: block;
-  width: 100%;
+  // width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   color: @white-color;
   background-color: @grass-color;
   text-decoration: none;
@@ -13,9 +13,35 @@
   border: none;
   cursor: pointer;
   .main-font();
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--all {
-  color: @further-color;
+  color: @base-color;
   background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
