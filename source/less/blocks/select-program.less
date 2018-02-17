@@ -85,20 +85,41 @@
 }
 
 .select-program__field--contacts {
-  margin-top: 30px;
-  padding-top: 33px;
+  padding-top: 28px;
   padding-bottom: 15px;
-  padding-right: 19px;
-  padding-left: 19px;
   border: none;
   .select-program__text {
     padding-right: 32px;
   }
+
+  .content-wrapper {
+    padding-top: 36px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
 }
 
 .select-program__legend--contacts {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  span {
+    display: block;
+    width: 182px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    height: 3px;
+    width: 99px;
+    background-color: @grass-color;
+  }
 }
 
 .select-program__icon {
@@ -114,10 +135,32 @@
 
 .select-program__field--comment {
   margin-bottom: 27px;
-  padding-right: 19px;
-  padding-left: 19px;
-  padding-top: 35px;
   border: none;
+  // padding-top: 35px;
+
+  .content-wrapper {
+    padding-top: 35px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+}
+
+.select-program__legend--comment {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    height: 3px;
+    width: 157px;
+    background-color: @grass-color;
+  }
 }
 
 .select-program__text {
@@ -180,10 +223,31 @@
 }
 
 .select-program__field--add {
-  padding-top: 39px;
-  padding-right: 19px;
-  padding-left: 19px;
   border: none;
+
+  .content-wrapper {
+    padding-top: 38px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+}
+
+.select-program__legend--add {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    height: 3px;
+    width: 136px;
+    background-color: @grass-color;
+  }
 }
 
 .select-program__label--add {
@@ -247,6 +311,14 @@
     margin-bottom: 20px;
   }
 
+  .select-program__field {
+    .wrap {
+      &::before {
+        top: 23px;
+      }
+    }
+  }
+
   .select-program__field--information {
     margin-bottom: 40px;
     padding-left: 71px;
@@ -255,7 +327,7 @@
 
   .select-program__field--result {
     margin-left: 71px;
-    margin-bottom: 76px;
+    margin-bottom: 46px;
     padding-top: 33px;
     padding-bottom: 2px;
   }
@@ -281,10 +353,30 @@
   }
 
   .select-program__field--contacts {
-    margin-bottom: 30px;
-    padding-top: 74px;
-    padding-left: 71px;
-    padding-right: 65px;
+    margin-bottom: 35px;
+
+    .content-wrapper {
+      padding-top: 74px;
+      padding-left: 71px;
+      padding-right: 65px;
+    }
+  }
+
+  .select-program__legend--contacts {
+    width: 708px;
+    padding-left: 0;
+    padding-right: 0;
+
+    span {
+      width: 595px;
+      padding-left: 41px;
+      padding-right: 42px;
+      background-color: @white-color;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .select-program__icon--email {
@@ -298,17 +390,57 @@
   }
 
   .select-program__field--comment {
-    margin-bottom: 64px;
-    padding-top: 78px;
-    padding-left: 70px;
-    padding-right: 67px;
+    margin-bottom: 60px;
+
+    .content-wrapper {
+      padding-top: 78px;
+      padding-left: 70px;
+      padding-right: 67px;
+    }
+  }
+
+  .select-program__legend--comment {
+    width: 708px;
+    padding-right: 0;
+    padding-left: 0;
+
+    span {
+      width: 260px;
+      padding-right: 40px;
+      padding-left: 40px;
+      background-color: @white-color;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .select-program__field--add {
     margin-bottom: 0;
-    padding-top: 66px;
-    padding-left: 70px;
-    padding-right: 68px;
+
+    .content-wrapper {
+      padding-top: 66px;
+      padding-left: 70px;
+      padding-right: 68px;
+    }
+  }
+
+  .select-program__legend--add {
+    width: 708px;
+    padding-right: 0;
+    padding-left: 0;
+
+    span {
+      width: 294px;
+      padding-right: 41px;
+      padding-left: 41px;
+      background-color: @white-color;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .select-program__rubric-add {
@@ -400,6 +532,8 @@
     width: 283px;
     margin-left: 71px;
     margin-right: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: 20px;
     line-height: 20px;
     vertical-align: middle;
@@ -416,7 +550,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .select-program {
+  .select-program .content-wrapper {
     display: flex;
     flex-wrap: wrap;
     padding-top: 18px;
@@ -438,40 +572,65 @@
   }
 
   .select-program__field--contacts {
-    width: 1300px;
     margin-bottom: 33px;
-    padding-left: 40px;
-    padding-right: 40px;
+    border: none;
+
+    .content-wrapper {
+      padding-top: 75px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
     .select-program__rubric {
       width: 570px;
+
+      &:nth-of-type(1) {
+        margin-right: 80px;
+      }
     }
   }
 
+  .select-program__legend {
+    &--contacts,
+    &--comment,
+    &--add {
+    width: 1300px;
+  }
+}
+
   .select-program__field--comment {
-    padding-right: 40px;
-    padding-left: 40px;
+    margin-bottom: 68px;
+
+    .content-wrapper {
+      padding-top: 76px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
   }
 
   .select-program__field--add {
-    width: 1300px;
-    padding-left: 40px;
-    padding-right: 40px;
+    // background-color: pink;
+
+    .content-wrapper {
+      padding-top: 66px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 
   .select-program__rubric-add {
     width: 245px;
-    margin-right: 75px;
-    margin-bottom: 46px;
+    margin-right: 80px;
+    margin-bottom: 30px;
 
     &:nth-last-of-type(1) {
       margin-right: 0;
-      // margin-bottom: 42px;
+      margin-bottom: 30px;
     }
 
-     &:nth-last-of-type(2) {
-      // margin-bottom: 42px;
-     }
+    &:nth-last-of-type(2) {
+      margin-bottom: 30px;
+    }
   }
 
   .select-program__text--name {

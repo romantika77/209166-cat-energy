@@ -1,16 +1,32 @@
 .additional-goods {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
   color: @base-color;
   .main-font();
+  .content-wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .additional-goods__title {
+  position: relative;
+  width: 280px;
+  margin: 20px auto;
   margin-bottom: 26px;
   font-weight: 400;
   color: @mark-color;
-}
+  text-align: left;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    right: -20px;
+    width: 53px;
+    height: 3px;
+    background-color: @grass-color;
+  }
+ }
 
 .additional-goods__name {
   margin-top: 14px;
@@ -50,8 +66,13 @@
   color: @white-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
   background-color: @grass-color;
   text-align: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .additional-goods__icon {
@@ -76,18 +97,32 @@
 }
 
 @media (min-width: @tablet-width) {
-  .additional-goods {
+  .additional-goods
+    .content-wrapper {
     padding-right: 30px;
     padding-left: 30px;
+    padding-bottom: 61px;
   }
 
   .additional-goods__title {
-    padding-right: 37px;
-    padding-left: 37px;
-    margin: 0;
+    width: 708px;
+    margin: 0 auto;
     margin-bottom: 75px;
+    padding-right: 3px;
+    padding-left: 3px;
     font-size: 36px;
     line-height: 50px;
+
+    span {
+      width: 411px;
+      padding-right: 34px;
+      padding-left: 34px;
+      background-color: #ffffff;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .additional-goods__gift {
@@ -100,8 +135,12 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     text-align: left;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .additional-goods__item {
@@ -147,19 +186,29 @@
 
 @media (min-width: @desktop-width) {
   .additional-goods {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 40px;
-    padding-left: 40px;
-    // background-color: pink;
+    .content-wrapper {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-bottom: 71px;
+    }
   }
 
   .additional-goods__title {
+    width: 1300px;
+    margin: 0 auto;
     margin-bottom: 69px;
     padding-right: 0;
     padding-left: 0;
     line-height: 60px;
+
+    span {
+      width: 413px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
   }
 
   .additional-goods__wrapper {
@@ -204,6 +253,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .additional-goods__button {
