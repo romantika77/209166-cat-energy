@@ -17,12 +17,25 @@
   text-decoration: none;
   vertical-align: middle;
   text-align: right;
+
+  &:hover > .copyright__logo {
+    fill: @grass-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active > .copyright__logo {
+    fill: @grass-color;
+  }
 }
 
 .copyright__logo {
   display: inline-block;
   margin-left: 140px;
   vertical-align: middle;
+  fill: #666666;
 }
 
 @media (min-width: @tablet-width) {

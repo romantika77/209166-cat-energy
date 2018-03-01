@@ -90,6 +90,7 @@
     content: "";
     position: absolute;
     top: 7px;
+    // left: 96px;
     right: -34px;
     width: 24px;
     height: 11px;
@@ -97,6 +98,17 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  &:hover::after {
+    width: 33px;
+    right: -43px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 @media (min-width: @tablet-width) {
@@ -166,6 +178,10 @@
     &::after {
       top: 9px;
       right: -46px;
+    }
+
+    &:hover::after {
+      right: -55px;
     }
   }
 }
