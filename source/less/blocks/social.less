@@ -16,7 +16,7 @@
 
   &:active > .social__icon {
     fill: @grass-color;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }
 
@@ -28,6 +28,14 @@
 
 .social__icon {
   fill: #666666;
+}
+
+.social__icon {
+  &--vk,
+  &--inst,
+  &--fb {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -53,5 +61,21 @@
   .social__icon--fb {
     width: 14px;
     height: 28px;
+  }
+
+  .social__icon {
+    &--vk,
+    &--inst,
+    &--fb {
+      display: block;
+    }
+  }
+
+  .social__icon {
+    &--vk-mobile,
+    &--inst-mobile,
+    &--fb-mobile {
+      display: none;
+    }
   }
 }
