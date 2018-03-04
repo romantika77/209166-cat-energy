@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <title>Кэт энерджи: главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
   </head>
   <body>
     <div style="display: none">
@@ -42,12 +47,15 @@
         <p class="promo__tagline">Занялся собой? Займись котом!</p>
         <div class="promo__picture">
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="promo__image promo__image--big" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat energy chicken">
           </picture>
         </div>
-        <a href="#" class="button promo__button">Подобрать программу</a>
+        <a href="#" class="promo__button button">Подобрать программу</a>
       </section>
     </div>
     <main>
@@ -92,26 +100,32 @@
             <p class="example__cost">Затраты на питание: <span class="example__amount">15 000 руб.</span></p>
           </div>
           <div class="example__slider slider">
+            <input class="slider__toggle" type="radio" name="progress" id="slider-btn-1" checked>
+            <input class="slider__toggle" type="radio" name="progress" id="slider-btn-2">
             <ul class="slider__list">
-              <li class="slider__item">
+              <li class="slider__item slider__item--item1">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                   <img class="slider__picture slider__picture--once" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Было">
                 </picture>
               </li>
-              <li class="slider__item">
+              <li class="slider__item slider__item--item2">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                   <img class="slider__picture slider__picture--new" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Стало">
                 </picture>
               </li>
             </ul>
-            <input class="slider__toggle" type="radio" name="progress" id="radio-1" checked="">
-            <input class="slider__toggle" type="radio" name="progress" id="radio-2">
             <div class="slider__controls">
-              <label class="slider__label" for="radio-1">Было</label>
+              <label class="slider__label" for="slider-btn-1">Было</label>
               <div class="slider__switch switch">
                 <div class="switch__toggle switch__toggle--before"><span class="visually-hidden">Было</span></div>
                 <div class="switch__toggle switch__toggle--after"><span class="visually-hidden">Стало</span></div>
@@ -120,7 +134,7 @@
                 <div class="range-filter__scale"></div>
                 <div class="range-filter__toggle"></div>
               </div>
-              <label class="slider__label" for="radio-2">Стало</label>
+              <label class="slider__label" for="slider-btn-2">Стало</label>
             </div>
           </div>
         </div>
@@ -129,8 +143,10 @@
     <footer class="page-footer">
       <div class="page-footer__top">
         <div class="content-wrapper">
-          <p class="page-footer__distributors">Приглашаем<br>к сотрудничеству дилеров!</p>
-          <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></p>
+          <div class="page-footer__wrapper">
+            <p class="page-footer__distributors">Приглашаем<br>к сотрудничеству дилеров!</p>
+            <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></p>
+          </div>
         </div>
       </div>
       <div class="page-footer__map">
@@ -164,6 +180,8 @@
       </div>
     </footer>
     <script src="js/openMenu.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
   </body>
 </html>
 

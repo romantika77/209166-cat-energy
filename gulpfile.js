@@ -135,10 +135,6 @@ gulp.task("build", function (done) {
 // var run = require("run-sequence");
 // var del = require("del");
 
-// var onError = function (err) {
-// console.log(err);
-// };
-
 // gulp.task("serve", function() {
 //   server.init({
 //     server: "build/",
@@ -185,7 +181,7 @@ gulp.task("build", function (done) {
 // });
 
 // gulp.task("sprite", function() {
-//   return gulp.src("source/img/icon-*.svg")
+//   return gulp.src("source/img/*.svg")
 //     .pipe(svgstore({
 //       inlineSvg: true
 //     }))

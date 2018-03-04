@@ -1,5 +1,5 @@
 .page-footer__top {
-  .content-wrapper {
+  .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
     padding-right: 20px;
@@ -13,7 +13,7 @@
 .page-footer__top--colored {
   background-color: #f2f2f2;
 
-  .content-wrapper {
+  .page-footer__wrapper {
     background-color: #f2f2f2;
   }
 }
@@ -95,7 +95,7 @@
     line-height: 25px;
   }
 
-  .page-footer__top .content-wrapper {
+  .page-footer__top .page-footer__wrapper {
     padding-top: 63px;
     padding-right: 71px;
     padding-left: 71px;
@@ -119,7 +119,7 @@
     height: 396px;
     background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
     background-position: 50% 50%, center 0;
-    background-color: pink;
+    background-color: #f2f1ec;
     background-size: 120px, cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -158,19 +158,22 @@
 
 @media (min-width: @desktop-width) {
   .page-footer__top {
-    position: relative;
-
+    // position: relative;
     .content-wrapper {
-      position: absolute;
-      top: 95px;
-      left: 60px;
-      width: 570px;
-      padding-right: 85px;
-      padding-left: 76px;
-      padding-top: 65px;
-      padding-bottom: 57px;
-      background-color: @white-color;
+      position: relative;
     }
+  }
+
+  .page-footer__wrapper {
+    position: absolute;
+    top: 95px;
+    left: 60px;
+    width: 570px;
+    padding-right: 85px;
+    padding-left: 76px;
+    padding-top: 65px;
+    padding-bottom: 57px;
+    background-color: @white-color;
   }
 
   .page-footer__address {
