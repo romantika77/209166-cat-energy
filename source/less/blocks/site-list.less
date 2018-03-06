@@ -48,17 +48,21 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 19px;
   }
 
   .site-list__item {
     border-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .site-list__link {
     margin-left: 36px;
-    padding-top: 11px;
+    padding-top: 0;
     color: @further-color;
     font-size: 18px;
     font-weight: 400;
@@ -68,6 +72,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .site-list {
+    padding-top: 9px;
+  }
+
   .site-list__link--white {
     color: #ffffff;
 
@@ -78,7 +86,7 @@
 
   .site-list__link {
     margin-left: 33px;
-    padding-top: 40px;
+    padding-top: 11px;
     font-size: 20px;
     line-height: 24.86px;
   }

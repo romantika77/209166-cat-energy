@@ -9,6 +9,11 @@
 
 .social__btn {
   width: 22px;
+  margin-right: 37px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 
   &:hover > .social__icon {
     fill: @grass-color;
@@ -21,8 +26,6 @@
 }
 
 .social__btn--inst {
-  margin-left: 30px;
-  margin-right: 40px;
   text-align: right;
 }
 
@@ -43,9 +46,12 @@
     min-width: 324px;
   }
 
-  .social__btn--inst {
-    margin-left: 37px;
-    margin-right: 28px;
+  .social__btn {
+    margin-right: 30px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   .social__icon--vk {

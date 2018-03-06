@@ -117,14 +117,16 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
+    flex-wrap: wrap;
     min-height: 83px;
     padding-right: 30px;
     padding-left: 30px;
+    padding-top: 23px;
   }
 
   .main-nav__logo {
     width: 192px;
-    padding-top: 23px;
+    padding-top: 0;
     border-bottom: 0;
   }
 
@@ -150,13 +152,14 @@
   .main-nav {
     justify-content: space-between;
     min-height: 114px;
+    padding-top: 53px;
     padding-right: 40px;
     padding-left: 40px;
   }
 
   .main-nav__logo {
     width: 245px;
-    padding-top: 54px;
+    // padding-top: 54px;
   }
 
   .main-nav__logo-image {
