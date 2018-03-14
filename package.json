@@ -17,6 +17,7 @@
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0",
     "gulp-webp": "^3.0.0",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
@@ -46,5 +47,9 @@
   "engines": {
     "node": "8.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-svgmin": "^1.2.4",
+    "pump": "^3.0.0"
+  }
 }
